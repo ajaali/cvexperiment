@@ -1,0 +1,4 @@
+.metadata/*
+deploy/*
+.hyde_deps
+.DS_Store
