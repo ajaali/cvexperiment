@@ -3,8 +3,8 @@
 <html>
 
 	<head>
-		<title>TheCVexperiment</title>
-                <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
+		<title>HappyCV.Co</title>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
   			api_key: vrhgoh8uur9f
@@ -16,22 +16,31 @@
 	</head>	
 	
 	<body>
-		<div id="header">
+		<div id="page">
+			<div id="menubar">
+				<p class="nav-title leckerli">Welcome to HappyCV.Co</p>
+				<p class="nav-writing leckerli">Refresh your CV with our great template.</p>
+				<p class="nav-writing-small satisfy">Sign in with linkedin to fillout the template:</p>
 				<script type="in/Login"></script> 
-		</div>
-		<div id="cv">
-			<div class="page"></div>
-			<div class="page"></div>
-			<div class="page"></div>
-			<div class="page"></div>
-			<div class="page"></div>
-			<div class="page"></div>
-		<div>
+				
+				<div class="share">
+					<p class="nav-writing-small satisfy">Share our site with your friends:</p>
+					<img id="button-facebook" class="share" src="{{ STATIC_URL }}/facebook.png"/>
+					<img id="button-linkedin" class="share" src="{{ STATIC_URL }}/linkedin.png"/>
+					<img id="button-twitter" class="share" src="{{ STATIC_URL }}/twitter-2.png"/>
+					<img id="button-google-plus" class="share" src="{{ STATIC_URL }}/google-plus.png"/>
+				</div>			
+				
+				<div id="ads-box">
+				</div>
+			</div>
 			
-		
-		
-		
-		
+			<div id="cv">
+				<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
+				<div class="page"></div>
+				<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
+			<div>
+		</div>			
 	</body>
 	
 	

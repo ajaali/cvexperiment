@@ -1,31 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+@import url(http://fonts.googleapis.com/css?family=Sacramento);
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+
 body {
-	background-color: Wheat;
+	background-color: Wheat;	
 }
 
-#header {
+#page {
 	margin-left:auto;
 	margin-right:auto;
-	height:100px;
-	width:970px;
-	/*background-color: grey;*/
+	width:1175px;
+	margin-top:80px;
+	
+}
+
+#menubar {
+	float:left;
+	width:420px;
+	height: 700px;
+	background-color:#CDF7DD;
+	border-style:solid;
+	border-color:#CDF7DD;
+	border-radius: 15px;
+	padding:20px;
+	margin-right:50px;
+}
+
+.nav-title {
+	color: red;
+	font-size: 70px;
+	margin:0px 0px 20px 0px;
+	line-height:1;
+}
+
+.nav-writing {
+	font-size: 20px;
+	margin:0px 0px 5px 0px;
+}
+
+.nav-writing-small {
+	font-size: 16px;
+	margin:0px 0px 5px 3px;
+	display: inline;	
+}
+
+
+
+.satisfy { font-family: 'Satisfy', cursive; }
+.sacramento { font-family: 'Sacramento', cursive; }
+.leckerli { font-family: 'Leckerli One', cursive; }
+
+.IN-widget
+{
+	float:right;
+}
+
+div.share
+{
+	margin: 20px 0px 25px 0px;
+	float: right;
+}
+
+img.share
+{
+	margin: 0px 3px 0px 3px;
+	vertical-align:middle;
+	horizontal-align:center;
+}
+
+#ads-box {
+	background-color:white;
+	margin-top: 40px;
+	width:420px;
+	height:420px;
+	clear:both;
+	border-style:solid;
+	border-width:1px;
+}
+
+img.page-button
+{
+	float:left;
+	margin-top:330px;
 }
 
 #cv {
-	width:510px;
-	height: 710px;
-	margin-left:auto;
-	margin-right:auto;
-	overflow : auto;
+	float:left;
 }
 
 div.page {
 	float:left;
 	background-color:white;
-	margin:5px;
-	width:495px;
-	height:700px; 
-	border-style:solid;
-	border-width:1px;
-	border-color:grey;
+	margin:0px 20px 0px 20px;
+	width:523px;
+	height:740px;
 }
 
