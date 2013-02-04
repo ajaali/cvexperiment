@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
 @import url(http://fonts.googleapis.com/css?family=Sacramento);
 @import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+@import url(http://fonts.googleapis.com/css?family=Handlee);
 
 body {
 	background-color: Wheat;	
@@ -9,14 +10,14 @@ body {
 #page {
 	margin-left:auto;
 	margin-right:auto;
-	width:1175px;
+	width:1185px;
 	margin-top:80px;
 	
 }
 
 #menubar {
 	float:left;
-	width:420px;
+	width:430px;
 	height: 700px;
 	background-color:#CDF7DD;
 	border-style:solid;
@@ -49,6 +50,7 @@ body {
 .satisfy { font-family: 'Satisfy', cursive; }
 .sacramento { font-family: 'Sacramento', cursive; }
 .leckerli { font-family: 'Leckerli One', cursive; }
+.handlee { font-family: 'Handlee', cursive; }
 
 .IN-widget
 {
@@ -78,6 +80,10 @@ img.share
 	border-width:1px;
 }
 
+#logged-in-text {
+	display:none;
+}
+
 img.page-button
 {
 	float:left;
@@ -86,12 +92,17 @@ img.page-button
 
 #cv {
 	float:left;
+	width:523px;
+	height:740px;
+	border-style:solid;
+	border-width:thin;
+	/*background-color:white;*/
 }
 
 div.page {
 	float:left;
 	background-color:white;
-	margin:0px 20px 0px 20px;
+	margin:0px;
 	width:523px;
 	height:740px;
 }

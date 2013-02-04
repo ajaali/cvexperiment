@@ -1,42 +1,19 @@
-
-
-
 function onLinkedInLoad() {
-//     IN.Event.on(IN, "auth", onLinkedInAuth);
+     IN.Event.on(IN, "auth", onLinkedInAuth);
 }
 
-/*
 function onLinkedInAuth() {
-     IN.API.Profile("me").result(displayProfiles);
-}
-
-function displayProfiles(profiles) {
-     member = profiles.values[0];
-     document.getElementById("profiles").innerHTML = 
-          "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
-}*/
-/*
-function onLinkedInAuth() {
-  IN.API.Profile("me","url=http://www.linkedin.com/in/jakobheuser")
+  // Change the login div
+  $("#login-text").hide();
+  // Retrieve linkedin profile
+  IN.API.Profile("me")
     .fields("firstName", "lastName", "industry")
     .result(displayProfiles);
 }
 
-
 function displayProfiles(profiles) {
-  var profilesDiv = document.getElementById("profiles");
-
-  var members = profiles.values;
-  for (var member in members) {
-    profilesDiv.innerHTML += "<p>" + members[member].firstName + " " + members[member].lastName 
-      + " works in the " + members[member].industry + " industry.";
-  }
+  var member = profiles.values[0];
+  $("#logged-in-text").show()
+                      .html("Hello " + member.firstName + ", you are now logged in." );
+  start_serious_design(member);
 }
-*/
-
-function setHeights () {
-	console.log($("#cv_body").height())
-	$("#contact_place").height($("#cv_body").height());
-}
-
-//$(document).ready( setHeights );

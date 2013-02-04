@@ -5,13 +5,23 @@
 	<head>
 		<title>HappyCV.Co</title>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main-print.css" media="print">
+		<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main-print.css">-->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
   			api_key: vrhgoh8uur9f
   			onLoad: onLinkedInLoad
-//  			authorize: true
+  			authorize: true
 		</script>
-                <script src="{{ STATIC_URL }}main.js"></script>
+		<script src="{{ STATIC_URL }}serious_design.js"></script>
+		<script src="{{ STATIC_URL }}main.js"></script>
+		<script>
+			function printpage()
+			  {
+			  window.print()
+			  }
+		</script>
 		
 	</head>	
 	
@@ -19,13 +29,14 @@
 		<div id="page">
 			<div id="menubar">
 				<p class="nav-title leckerli">Welcome to HappyCV.Co</p>
-				<p class="nav-writing leckerli">Refresh your CV with our great template.</p>
-				<p class="nav-writing-small satisfy">Sign in with linkedin to fillout the template:</p>
+				<p class="nav-writing handlee">Refresh your CV with our great template.</p>
+				<p id="login-text" class="nav-writing-small handlee">Sign in with linkedin to fillout the template:</p>
 				<script type="in/Login"></script> 
+				<p id="logged-in-text" class="nav-writing handlee"></p>
 				
 				<div class="share">
-					<p class="nav-writing-small satisfy">Share our site with your friends:</p>
-					<img id="button-facebook" class="share" src="{{ STATIC_URL }}/facebook.png"/>
+					<p class="nav-writing-small handlee">Share our site with your friends:</p>
+					<img id="button-facebook" class="share" src="{{ STATIC_URL }}/facebook.png" onclick="printpage()"/>
 					<img id="button-linkedin" class="share" src="{{ STATIC_URL }}/linkedin.png"/>
 					<img id="button-twitter" class="share" src="{{ STATIC_URL }}/twitter-2.png"/>
 					<img id="button-google-plus" class="share" src="{{ STATIC_URL }}/google-plus.png"/>
@@ -35,11 +46,21 @@
 				</div>
 			</div>
 			
+			<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
 			<div id="cv">
-				<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
-				<div class="page"></div>
-				<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
-			<div>
+				<!--<div class="page">-->
+					<!--<div id="name-box"><label id="name" class="rambla">Ahmed J A Ali</label></div>-->
+					<!--<div id="contact-box">-->
+						<!--<label class="contact-title rambla">Address:</label>-->
+						<!--<label class="contact-value rambla">54 Coopers Court, London, United Kingdom, W3 8PN</label>-->
+						<!--<label class="contact-title rambla">Phone:</label>-->
+						<!--<label class="contact-value rambla">+44 783 839 1934</label>-->
+						<!--<label class="contact-title rambla">email:</label>-->
+						<!--<label class="contact-value rambla">aja.ali@gmail.com</label>-->
+					<!--</div>-->
+				<!--</div>-->
+			</div>
+			<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
 		</div>			
 	</body>
 	

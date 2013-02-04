@@ -1,0 +1,30 @@
+@media print {
+#header, #footer {display:none;}
+}
+
+body {
+	background-color: White;
+	margin:0px;
+}
+
+#menubar {
+	display:none;
+}
+
+img.page-button
+{
+	display:none;
+}
+
+#cv {
+	width: 100%; margin: 0; float: none;
+}
+
+div.page {
+	width: 21cm;
+	height: 29.7cm; 
+	margin: 0px 0px 50px 0px; 
+	float: none;
+	background-color:white;
+}
+

@@ -1,0 +1,41 @@
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700);
+
+
+.name-box {
+    border-bottom-style: solid;
+    border-width: medium;
+    width: 100%;
+    height: 5%;
+}
+
+.rambla { font-family: 'Rambla', sans-serif; }
+
+#name {
+    font-size:22px;
+    float:left;
+    margin-left:5px;
+    margin-top:28px;
+}
+
+.contact-box {
+    width: 20%;
+    height: 90%;
+    padding-top: 50px;
+    border-right-style:solid;
+    border-width: medium;
+}
+
+
+
+.contact-title {
+    padding: 5px 0px 2px 5px;
+    display:block;
+    font-size:14px;
+    font-weight:700;
+}
+
+.contact-value {
+    padding: 0px 0px 2px 5px;
+    display:block;
+    font-size:12px;
+}
