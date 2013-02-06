@@ -8,21 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main-print.css" media="print">
 		<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main-print.css">-->
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design-print.css" media="print">		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
   			api_key: vrhgoh8uur9f
+			scope: r_basicprofile,r_fullprofile,r_emailaddress,r_contactinfo
   			onLoad: onLinkedInLoad
   			authorize: true
 		</script>
 		<script src="{{ STATIC_URL }}serious_design.js"></script>
-		<script src="{{ STATIC_URL }}main.js"></script>
-		<script>
-			function printpage()
-			  {
-			  window.print()
-			  }
-		</script>
-		
+		<script src="{{ STATIC_URL }}main.js"></script>		
 	</head>	
 	
 	<body>
@@ -49,8 +44,8 @@
 			<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
 			<div id="cv">
 				<!--<div class="page">-->
-					<!--<div id="name-box"><label id="name" class="rambla">Ahmed J A Ali</label></div>-->
-					<!--<div id="contact-box">-->
+					<!--<div class="name-box"><label id="name" class="rambla">Ahmed J A Ali</label></div>-->
+					<!--<div class="contact-box">-->
 						<!--<label class="contact-title rambla">Address:</label>-->
 						<!--<label class="contact-value rambla">54 Coopers Court, London, United Kingdom, W3 8PN</label>-->
 						<!--<label class="contact-title rambla">Phone:</label>-->
@@ -58,7 +53,26 @@
 						<!--<label class="contact-title rambla">email:</label>-->
 						<!--<label class="contact-value rambla">aja.ali@gmail.com</label>-->
 					<!--</div>-->
+					<!--<div class="content-box">-->
+						<!--<div class="content-section">-->
+							<!--<h2 class="rambla">PROFILE SUMMARY</h2>-->
+							<!--<p class="description cantarell">I am financial software developer specialising in market risk solutions. I have been involved in multiple projects working on VaR, Stress and Risk calculation engines for regulatory and internal controls. I have experience in leading development teams and delivering time critical projects using agile methodologies.</p>-->
+						<!--</div>-->
+						<!--<div class="content-section">-->
+							<!--<h2 class="rambla">EDUCATION</h2>-->
+							<!--<div class="company-header rambla">-->
+								<!--<label class="company-name">Cass Business School</label>-->
+								<!--<label class="company-dates">2004 - 2005</label>-->
+							<!--</div>-->
+							<!--<h4 class="rambla">Msc. Financial Mathematics - Pass</h4> -->
+						<!--</div>-->
+					<!--</div>-->
 				<!--</div>-->
+				
+				
+				
+				
+				
 			</div>
 			<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
 		</div>			

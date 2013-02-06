@@ -17,7 +17,8 @@ img.page-button
 }
 
 #cv {
-	width: 100%; margin: 0; float: none;
+	border-style:none;
+	margin: 0; float: none;
 }
 
 div.page {
