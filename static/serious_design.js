@@ -1,74 +1,89 @@
+// Add an element to the page.  We check the amount of space remaining on the page and we 
+// return a new page if needed
+add_to_page = function (element) {
+    element.appendTo(content_box);
+    if (space_remaining - element.outerHeight(true) < 0) {
+        create_page(member);        
+    }
+    space_remaining = space_remaining - element.outerHeight(true);
+    element.appendTo(content_box);
+}
+
+
 // Entry function to create the cv using this formating
 // member -- the linkedin memeber profile
 start_serious_design = function (member) {
-    var content_box = create_page(member);
+    create_page(member);
     
     //Create the summary section
     if (member.summary != "") {
-        var summary_section = $("<div>").addClass("content-section")
-                                         .appendTo(content_box);
-        $("<h2>").addClass("rambla")
-                 .html("EXPERTISE & OBJECTIVES")
-                 .appendTo(summary_section);
-        $("<p>").addClass("description cantarell")
-                .html(member.summary)
-                .appendTo(summary_section);
+        add_to_page($("<h2>").addClass("rambla")
+                             .html("EXPERTISE & OBJECTIVES"));
+        add_to_page($("<p>").addClass("description cantarell")
+                             .html(member.summary));
     }
     
+    //Add Positions
+    if (member.positions.values != undefined) {
+        add_to_page($("<h2>").addClass("rambla")
+                              .html("WORK EXPERIENCE"));
+        $.each(member.positions.values, function(index, pos) {
+            var date_str = pos.startDate.month + "/" + pos.startDate.year + "-"
+            if (pos.endDate != undefined) {
+                date_str = date_str + pos.endDate.month + "/" + pos.endDate.year
+            }
+            else {
+                date_str = date_str + "Current"
+            }
+            var header = create_company_element(pos.company.name, 
+                                                 date_str);
+            add_to_page(header);
+            add_to_page($("<h4>").addClass("rambla")
+                                  .html(pos.title));
+            if (pos.summary != undefined) {
+                add_to_page($("<p>").addClass("description cantarell")
+                                     .html(pos.summary.replace(/(\r\n|\n|\r)/gm,"<br\>")));
+            }
+        });
+    }
     //Add Educations
     if (member.educations.values != undefined) {
-        var education_section = $("<div>").addClass("content-section")
-                                           .appendTo(content_box);
-        $("<h2>").addClass("rambla")
-                 .html("EDUCATION")
-                 .appendTo(education_section);
+        add_to_page($("<h2>").addClass("rambla")
+                              .html("EDUCATION"));
         $.each(member.educations.values, function(index, edu) {
             var header = create_company_element(edu.schoolName, 
                                                  edu.startDate.year + "-" + edu.endDate.year);
-            header.appendTo(education_section);
-            $("<h4>").addClass("rambla")
-                     .html(edu.degree + ", " + edu.fieldOfStudy)
-                     .appendTo(education_section);
+            add_to_page(header);
+            add_to_page($("<h4>").addClass("rambla")
+                                  .html(edu.degree + ", " + edu.fieldOfStudy));
             if (edu.notes != undefined) {
-                $("<p>").addClass("description cantarell")
-                        .html(edu.notes.replace(/(\r\n|\n|\r)/gm,"<br\>"))
-                        .appendTo(education_section);
+                add_to_page($("<p>").addClass("description cantarell")
+                                    .html(edu.notes.replace(/(\r\n|\n|\r)/gm,"<br\>")));
             }
         });
     }    
     //Add Certifications
     if (member.certifications.values != undefined) {
-        var certification_section = $("<div>").addClass("content-section")
-                                               .appendTo(content_box);
-        $("<h2>").addClass("rambla")
-                 .html("CERTIFICATIONS")
-                 .appendTo(certification_section);
+        add_to_page($("<h2>").addClass("rambla")
+                              .html("CERTIFICATIONS"));
         $.each(member.certifications.values, function(index, cert) {
-            $("<h4>").addClass("rambla")
-                     .html(cert.name)
-                     .appendTo(certification_section);
+            add_to_page($("<h4>").addClass("rambla")
+                                  .html(cert.name));
         });
     }    
     //Add Languages
     if (member.languages.values != undefined) {
-        var language_section = $("<div>").addClass("content-section")
-                                               .appendTo(content_box);
-        $("<h2>").addClass("rambla")
-                 .html("LANGUAGES")
-                 .appendTo(language_section);
+        add_to_page($("<h2>").addClass("rambla")
+                              .html("LANGUAGES"))
         $.each(member.languages.values, function(index, lang) {
-            $("<h4>").addClass("rambla")
-                     .html(lang.language.name)
-                     .appendTo(language_section);
+            add_to_page($("<h4>").addClass("rambla")
+                                  .html(lang.language.name));
         });
     }    
     //Add Skills
     if (member.skills.values != undefined) {
-        var skill_section = $("<div>").addClass("content-section")
-                                               .appendTo(content_box);
-        $("<h2>").addClass("rambla")
-                 .html("Skills")
-                 .appendTo(language_section);
+        add_to_page($("<h2>").addClass("rambla")
+                              .html("Skills"));
         var skills_string = ""
         $.each(member.skills.values, function(index, skill) {
             skills_string = skills_string + skill.skill.name
@@ -76,9 +91,8 @@ start_serious_design = function (member) {
                 skills_string = skills_string + ", "
             }
         });
-        $("<p>").addClass("description cantarell")
-                .html(skills_string)
-                .appendTo(skill_section);
+        add_to_page($("<p>").addClass("description cantarell")
+                            .html(skills_string));
     }    
 }
 
@@ -140,9 +154,7 @@ create_page = function (member) {
                     .appendTo(contact_box);
     }
     //Add Content Section
-    var content_box = $("<div>").addClass("content-box")
-                                 .appendTo(page);
-
-    
-    return content_box;
+    content_box = $("<div>").addClass("content-box")
+                            .appendTo(page);
+    space_remaining = content_box.height()
 }
