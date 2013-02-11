@@ -93,7 +93,7 @@ img.page-button
 #cv {
 	float:left;
 	width:523px;
-	/*height:740px;*/
+	height:740px;
 	border-style:solid;
 	border-width:thin;
 	/*background-color:white;*/
@@ -104,6 +104,6 @@ div.page {
 	background-color:white;
 	margin:0px;
 	width:523px;
-	/*height:740px;*/
+	height:740px;
 }
 

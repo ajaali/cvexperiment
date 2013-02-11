@@ -2,6 +2,8 @@
 // return a new page if needed
 add_to_page = function (element) {
     element.appendTo(content_box);
+    console.log(element);
+    console.log("height " + element.outerHeight(true));
     if (space_remaining - element.outerHeight(true) < 0) {
         create_page(member);        
     }
@@ -9,12 +11,55 @@ add_to_page = function (element) {
     element.appendTo(content_box);
 }
 
+next_button_click = function () {
+    var pages = $("#cv>div.page");
+    if (page_shown < pages.length - 1) {
+        $(pages[page_shown]).hide();
+        page_shown = page_shown + 1;
+        $(pages[page_shown]).show();        
+    }
+    else {
+        // Disable the button
+    }
+}
+
+prev_button_click = function () {
+    var pages = $("#cv>div.page");
+    if (page_shown > 0) {
+        $(pages[page_shown]).hide();
+        page_shown = page_shown - 1;
+        $(pages[page_shown]).show();        
+    }
+    else {
+        // Disable the button
+    }
+}
+
 
 // Entry function to create the cv using this formating
 // member -- the linkedin memeber profile
 start_serious_design = function (member) {
-    create_page(member);
+    page_shown = 0;
+    $("#prev-button").click(prev_button_click);
+    $("#next-button").click(next_button_click);
     
+    create_page(member, false);
+    create_summary(member);
+    create_position(member);
+    create_education(member);
+    create_certification(member);
+    create_language(member);
+    create_skills(member);  
+    
+    $("#cv>div.page").each(function (idx, page) {
+        if (idx > 0) {
+            $(page).hide();
+        }
+    });
+    
+}
+
+create_summary = function (member) {
     //Create the summary section
     if (member.summary != "") {
         add_to_page($("<h2>").addClass("rambla")
@@ -22,7 +67,10 @@ start_serious_design = function (member) {
         add_to_page($("<p>").addClass("description cantarell")
                              .html(member.summary));
     }
-    
+}
+
+
+create_position = function (member) {
     //Add Positions
     if (member.positions.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
@@ -46,6 +94,9 @@ start_serious_design = function (member) {
             }
         });
     }
+}
+
+create_education = function (member) {
     //Add Educations
     if (member.educations.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
@@ -61,7 +112,10 @@ start_serious_design = function (member) {
                                     .html(edu.notes.replace(/(\r\n|\n|\r)/gm,"<br\>")));
             }
         });
-    }    
+    }   
+}
+
+create_certification = function (member) {
     //Add Certifications
     if (member.certifications.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
@@ -70,7 +124,10 @@ start_serious_design = function (member) {
             add_to_page($("<h4>").addClass("rambla")
                                   .html(cert.name));
         });
-    }    
+    }
+}
+
+create_language = function (member) {
     //Add Languages
     if (member.languages.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
@@ -79,7 +136,10 @@ start_serious_design = function (member) {
             add_to_page($("<h4>").addClass("rambla")
                                   .html(lang.language.name));
         });
-    }    
+    } 
+}
+
+create_skills = function (member) {
     //Add Skills
     if (member.skills.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
@@ -96,6 +156,7 @@ start_serious_design = function (member) {
     }    
 }
 
+
 // Convenience function to create the company-header element
 create_company_element = function (name, date_period) {
     var header = $("<div>").addClass("company-header rambla");
@@ -110,10 +171,13 @@ create_company_element = function (name, date_period) {
 
 // Create a new cv page and return
 // member -- the linked in member profile
-create_page = function (member) {
+create_page = function (member, hidden) {
     // Create the page div
     var page = $("<div>").addClass("page")
                           .appendTo($("#cv"));
+    //if (hidden == undefined || hidden == true) {
+        //page.hide();
+    //}
     // Create the name box div
     var name_box = $("<div>").addClass("name-box")
                               .appendTo(page);
