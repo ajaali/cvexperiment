@@ -84,10 +84,15 @@ img.share
 	display:none;
 }
 
-img.page-button
-{
+img.page-button {
+	display:none;
+}
+
+div.button-holder {
 	float:left;
 	margin-top:330px;
+	width:48px;
+	height:48px;
 }
 
 #cv {

@@ -17,9 +17,10 @@ next_button_click = function () {
         $(pages[page_shown]).hide();
         page_shown = page_shown + 1;
         $(pages[page_shown]).show();        
+        $("#prev-button").show();
     }
-    else {
-        // Disable the button
+    if (page_shown == pages.length - 1) {
+        $("#next-button").hide();
     }
 }
 
@@ -29,9 +30,10 @@ prev_button_click = function () {
         $(pages[page_shown]).hide();
         page_shown = page_shown - 1;
         $(pages[page_shown]).show();        
+        $("#next-button").show();        
     }
-    else {
-        // Disable the button
+    if (page_shown == 0) {
+        $("#prev-button").hide();
     }
 }
 
@@ -39,7 +41,7 @@ prev_button_click = function () {
 // Entry function to create the cv using this formating
 // member -- the linkedin memeber profile
 start_serious_design = function (member) {
-    page_shown = 0;
+    page_shown = 0;    
     $("#prev-button").click(prev_button_click);
     $("#next-button").click(next_button_click);
     
@@ -54,6 +56,7 @@ start_serious_design = function (member) {
     $("#cv>div.page").each(function (idx, page) {
         if (idx > 0) {
             $(page).hide();
+            $("#next-button").show()
         }
     });
     
