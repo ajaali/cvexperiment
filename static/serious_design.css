@@ -49,7 +49,7 @@
 div.content-box{
     float:left;
     width: 400px;
-    height: 650px;
+    height: 680px;
 	padding-left:10px;
 	padding-top: 10px;
 }
@@ -74,13 +74,14 @@ h4 {
 	margin:0px; 
 	font-weight:400;
 	margin: 5px 0px	5px	5px;
+	line-height:16px;
 }
 
 .description {
 	font-size:10px;
 	font-style:italic;
-	margin:0px 5px 0px 0px;
-	line-height:15px;
+	margin:0px 10px 0px 5px;
+	line-height:16px;
 }
 
 .company-header {
@@ -100,4 +101,8 @@ h4 {
 .company-dates {
 	float:right;
 	margin-right: 5px;
+}
+
+.alignement-container {
+	overflow: auto;
 }

@@ -3,7 +3,7 @@
 add_to_page = function (element) {
     element.appendTo(content_box);
     console.log(element);
-    console.log("height " + element.outerHeight(true));
+    console.log("space remain " + space_remaining + " height " + element.outerHeight(true));
     if (space_remaining - element.outerHeight(true) < 0) {
         create_page(member);        
     }
@@ -41,7 +41,7 @@ prev_button_click = function () {
 // Entry function to create the cv using this formating
 // member -- the linkedin memeber profile
 start_serious_design = function (member) {
-    page_shown = 0;    
+    page_shown = 0;  
     $("#prev-button").click(prev_button_click);
     $("#next-button").click(next_button_click);
     
@@ -72,13 +72,22 @@ create_summary = function (member) {
     }
 }
 
-
+//Add Positions
 create_position = function (member) {
-    //Add Positions
+    // Check if the position parameter is returned in the member profile
     if (member.positions.values != undefined) {
+        // Create a title header for the position section
         add_to_page($("<h2>").addClass("rambla")
-                              .html("WORK EXPERIENCE"));
+                 .html("WORK EXPERIENCE"));
+                 
+        // Loop over the positions
         $.each(member.positions.values, function(index, pos) {
+            //Create a top holder div to make sure the formating is returned correctly on the page
+            //This makes sure that the comapny name, the title and the first line of the description
+            //are always kept on the same page
+            var top_holder = $("<div>").addClass("alignement-container");    
+        
+            //Format the date part of the company title
             var date_str = pos.startDate.month + "/" + pos.startDate.year + "-"
             if (pos.endDate != undefined) {
                 date_str = date_str + pos.endDate.month + "/" + pos.endDate.year
@@ -86,34 +95,85 @@ create_position = function (member) {
             else {
                 date_str = date_str + "Current"
             }
+            
+            //Add the comapny name
             var header = create_company_element(pos.company.name, 
                                                  date_str);
-            add_to_page(header);
-            add_to_page($("<h4>").addClass("rambla")
-                                  .html(pos.title));
+            header.appendTo(top_holder);
+            
+            //Add the title 
+            $("<h4>").addClass("rambla")
+                     .html(pos.title)
+                     .appendTo(top_holder);
+                     
+            //Check if there is a summary param returned as part of the position
             if (pos.summary != undefined) {
-                add_to_page($("<p>").addClass("description cantarell")
-                                     .html(pos.summary.replace(/(\r\n|\n|\r)/gm,"<br\>")));
+                //split the summary by return character and loop over them adding the 
+                //first one to the alignment-container div.
+                $.each(pos.summary.split("\n"), function (index, line) {
+                    if (index == 0) {
+                        $("<p>").addClass("description cantarell")
+                                 .html(line)
+                                 .appendTo(top_holder);
+                        add_to_page(top_holder);
+                    }
+                    else {
+                        add_to_page($("<p>").addClass("description cantarell")
+                                             .html(line));
+                    }
+                });
             }
+            else {
+                add_to_page(top_holder);
+            }
+            
         });
     }
 }
 
+//Add Educations
 create_education = function (member) {
-    //Add Educations
+    //if the ed section has values the continue
     if (member.educations.values != undefined) {
+        //Create the ed section header
         add_to_page($("<h2>").addClass("rambla")
                               .html("EDUCATION"));
+        //loop over the ed values
         $.each(member.educations.values, function(index, edu) {
+            //Create a top holder div to make sure the formating is returned correctly on the page
+            //This makes sure that the comapny name, the title and the first line of the description
+            //are always kept on the same page
+            var top_holder = $("<div>").addClass("alignement-container");    
+            //Add the school name
             var header = create_company_element(edu.schoolName, 
                                                  edu.startDate.year + "-" + edu.endDate.year);
-            add_to_page(header);
-            add_to_page($("<h4>").addClass("rambla")
-                                  .html(edu.degree + ", " + edu.fieldOfStudy));
+            header.appendTo(top_holder);
+            //Add the study title
+            $("<h4>").addClass("rambla")
+                     .html(edu.degree + ", " + edu.fieldOfStudy)
+                     .appendTo(top_holder);
+                        
+            //Check if there is a notes param returned as part of the education
             if (edu.notes != undefined) {
-                add_to_page($("<p>").addClass("description cantarell")
-                                    .html(edu.notes.replace(/(\r\n|\n|\r)/gm,"<br\>")));
+                //split the notes by return character and loop over them adding the 
+                //first one to the alignment-container div.
+                $.each(edu.notes.split("\n"), function (index, line) {
+                    if (index == 0) {
+                        $("<p>").addClass("description cantarell")
+                                 .html(line)
+                                 .appendTo(top_holder);
+                        add_to_page(top_holder);
+                    }
+                    else {
+                        add_to_page($("<p>").addClass("description cantarell")
+                                             .html(line));
+                    }
+                });
             }
+            else {
+                add_to_page(top_holder);
+            }
+            
         });
     }   
 }
