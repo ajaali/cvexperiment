@@ -1,38 +1,41 @@
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400italic);
 
 
 .name-box {
     border-bottom-style: solid;
     border-width: thin;
     width: 100%;
-    height: 37px;
+    height: 46px;
 }
 
 .rambla { font-family: 'Rambla', sans-serif; }
+.cantarell { font-family: 'Cantarell', sans-serif;}
 
 #name {
-    font-size:14px;
+    font-size:18px;
     float:left;
-    margin-left:5px;
-    margin-top:20px;
+    margin: 15px 0px 0px 15px;
+    padding:0px;
 }
 
 .contact-box {
-    width: 110px;
-    height: 653px;
+    float:left;
+    width: 130px;
+    height: 853px;
     border-right-style:solid;
     border-width: thin;
-    padding-top:50px;
+    padding-top:65px;
 }
 
 
 
 .contact-title {
     clear:both; 
-    margin: 10px 0px 2px 5px;
+    margin: 10px 0px 2px 15px;
     text-transform:capitalize;
     display:block;
-    font-size:12px;
+    font-size:14px;
     font-weight:700;
 }
 
@@ -40,5 +43,65 @@
     float:left;
     margin: 0px 0px 2px 20px;
     display:block;
-    font-size:10px;
+    font-size:12px;
+}
+
+div.content-box{
+    float:left;
+    width: 508px;
+    height: 870px;
+	padding-left:10px;
+	padding-right:0px;
+}
+
+
+h2 {
+	display:inline-block;
+	border-bottom-style:solid;
+	font-size:18px;
+	border-width:thin;
+	padding:0px;
+	margin:10px 0px 5px 0px; 
+	font-weight:400;
+	position:relative;
+	line-height:23px; /*need this to get jquery height correct with custom fonts*/
+}
+
+h4 {
+	display:block;
+	font-size:16px;
+	padding:0px;
+	margin:0px; 
+	font-weight:400;
+	margin: 5px 0px	5px	5px;
+	line-height:20px;
+}
+
+.description {
+	font-size:12px;
+	font-style:italic;
+	margin:0px 0px 0px 5px;
+	line-height:17px;
+}
+
+.company-header {
+	background-color: black;
+	font-size: 12px;
+	color: white;
+	margin-top:10px;
+	padding: 3px 0px 3px 0px;
+	line-height:16px;
+}
+
+.company-name {
+	margin-left: 5px;
+}
+
+.company-dates {
+	float:right;
+	margin-right: 5px;
+}
+
+.alignement-container {
+	overflow: auto;
 }
