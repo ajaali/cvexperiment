@@ -2,8 +2,20 @@
 // return a new page if needed
 add_to_page = function (element) {
     element.appendTo(content_box);
+    
+    // DEBUG CODE
     console.log(element);
-    console.log("space remain " + space_remaining + " height " + element.outerHeight(true));
+    console.log("space before " + space_remaining + 
+                " height " + element.outerHeight(true) +
+                " space after " + (space_remaining - element.outerHeight(true)) );
+    if (element.hasClass("alignement-container") == true) {
+        element.children().each(function (idx, chl) {
+            console.log($(chl));
+            console.log("Child Height: " + $(chl).outerHeight(true));
+        });
+    }
+    /// END DEBUG
+                
     if (space_remaining - element.outerHeight(true) < 0) {
         create_page(member);        
     }
@@ -152,6 +164,7 @@ create_education = function (member) {
             $("<h4>").addClass("rambla")
                      .html(edu.degree + ", " + edu.fieldOfStudy)
                      .appendTo(top_holder);
+            add_to_page(top_holder);
                         
             //Check if there is a notes param returned as part of the education
             if (edu.notes != undefined) {

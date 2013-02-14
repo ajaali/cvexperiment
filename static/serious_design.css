@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700);
-@import url(http://fonts.googleapis.com/css?family=Cantarell:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Cantarell:400italic);
 
 
 .name-box {
@@ -10,7 +10,7 @@
 }
 
 .rambla { font-family: 'Rambla', sans-serif; }
-.cantarell { font-family: 'Cantarell', sans-serif; }
+.cantarell { font-family: 'Cantarell', sans-serif;}
 
 #name {
     font-size:14px;
@@ -48,10 +48,10 @@
 
 div.content-box{
     float:left;
-    width: 400px;
+    width: 380px;
     height: 680px;
 	padding-left:10px;
-	padding-top: 10px;
+	padding-right:20px;
 }
 
 
@@ -80,8 +80,8 @@ h4 {
 .description {
 	font-size:10px;
 	font-style:italic;
-	margin:0px 10px 0px 5px;
-	line-height:16px;
+	margin:0px 0px 0px 5px;
+	line-height:15px;
 }
 
 .company-header {
@@ -89,7 +89,6 @@ h4 {
 	font-size: 12px;
 	color: white;
 	margin-top:10px;
-	margin-right:10px;
 	padding: 3px 0px 3px 0px;
 	line-height:16px;
 }
