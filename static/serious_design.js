@@ -89,16 +89,19 @@ create_position = function (member) {
     // Check if the position parameter is returned in the member profile
     if (member.positions.values != undefined) {
         // Create a title header for the position section
-        add_to_page($("<h2>").addClass("rambla")
-                 .html("WORK EXPERIENCE"));
+        var top_holder = $("<div>").addClass("alignement-container");    
+        $("<h2>").addClass("rambla")
+                 .html("WORK EXPERIENCE")
+                 .appendTo(top_holder);
                  
         // Loop over the positions
         $.each(member.positions.values, function(index, pos) {
             //Create a top holder div to make sure the formating is returned correctly on the page
             //This makes sure that the comapny name, the title and the first line of the description
             //are always kept on the same page
-            var top_holder = $("<div>").addClass("alignement-container");    
-        
+            if (index > 0) {
+                top_holder = $("<div>").addClass("alignement-container");    
+            }
             //Format the date part of the company title
             var date_str = pos.startDate.month + "/" + pos.startDate.year + "-"
             if (pos.endDate != undefined) {
@@ -148,14 +151,18 @@ create_education = function (member) {
     //if the ed section has values the continue
     if (member.educations.values != undefined) {
         //Create the ed section header
-        add_to_page($("<h2>").addClass("rambla")
-                              .html("EDUCATION"));
+        var top_holder = $("<div>").addClass("alignement-container");    
+        $("<h2>").addClass("rambla")
+                  .html("EDUCATION")
+                  .appendTo(top_holder);
         //loop over the ed values
         $.each(member.educations.values, function(index, edu) {
             //Create a top holder div to make sure the formating is returned correctly on the page
             //This makes sure that the comapny name, the title and the first line of the description
             //are always kept on the same page
-            var top_holder = $("<div>").addClass("alignement-container");    
+            if (index > 0) {
+                top_holder = $("<div>").addClass("alignement-container");    
+            }
             //Add the school name
             var header = create_company_element(edu.schoolName, 
                                                  edu.startDate.year + "-" + edu.endDate.year);
