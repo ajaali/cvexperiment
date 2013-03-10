@@ -21,19 +21,30 @@
 	<body>
 		<div id="page">
 			<div id="menubar">
-				<p class="nav-title leckerli">Welcome to PixledCV.com</p>
+				<p class="nav-title leckerli">Welcome to Pixeled CV</p>
 				<p class="nav-writing handlee">Refresh your CV with our great template.</p>
-				<p id="login-text" class="nav-writing-small handlee">Sign in with linkedin to fillout the template:</p>
-				<script type="in/Login"></script> 
-				<p id="logged-in-text" class="nav-writing handlee"></p>
+				<div id="loggin-holder">
+					<p id="login-text" class="nav-writing-small handlee">Sign in with linkedin to fillout the template:</p>
+					<script type="in/Login"></script> 
+				</div>
 				
-				<div class="share">
-					<p class="nav-writing-small handlee">Share our site with your friends:</p>
-					<img id="button-facebook" class="share" src="{{ STATIC_URL }}/facebook.png" onclick="printpage()"/>
-					<img id="button-linkedin" class="share" src="{{ STATIC_URL }}/linkedin.png"/>
-					<img id="button-twitter" class="share" src="{{ STATIC_URL }}/twitter-2.png"/>
-					<img id="button-google-plus" class="share" src="{{ STATIC_URL }}/google-plus.png"/>
-				</div>			
+				<div id="logged-text-holder">
+					<div id="logged-in-text" class="nav-writing-small handlee">
+						<p id="logged-in-name" class="logged-in"></p>
+						<p class="logged-in">Your cv has rendered on the right, flip through it and have a look. Remember, you can update it by updating your linkedin profile and refreshing this page.</p>
+						<p class="logged-in">Once you are happy with the way it looks, email it to yourself</p>
+						<img id="button-envelope" class="share" src="{{ STATIC_URL }}/email.png"/>
+						<p class="logged-in">Now that you're dandy with how it works, I'll leave you to it.</p>
+						<p class="logged-in">Also, don't forget to share with your friends</p>
+						<img id="button-facebook" class="share" src="{{ STATIC_URL }}/facebook.png"/>
+						<img id="button-linkedin" class="share" src="{{ STATIC_URL }}/linkedin.png"/>
+						<img id="button-twitter" class="share" src="{{ STATIC_URL }}/twitter-2.png"/>
+						<img id="button-google-plus" class="share" src="{{ STATIC_URL }}/google-plus.png"/>
+						<p class="logged-in">Enjoy.</p><br/>
+						<p class="logged-in">Socially Yours,</p><br/>
+						<p class="logged-in">The Pixeled CV Team</p><br/>
+					</div>
+				</div>
 				
 				<div id="ads-box">
 				</div>

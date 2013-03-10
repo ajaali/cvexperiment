@@ -28,10 +28,15 @@ function onLinkedInAuth() {
     .result(displayProfiles);
 }
 
+var logged_in_transforms = function (member) {
+  $("#logged-in-name").html("Hello " + member.firstName + ".");
+  $("#logged-in-text").show();
+}
+
+
 function displayProfiles(profiles) {
   member = profiles.values[0];
   console.log(member);
-  $("#logged-in-text").show()
-                      .html("Hello " + member.firstName + ", you are now logged in." );
+  logged_in_transforms(member);
   start_serious_design(member);
 }
