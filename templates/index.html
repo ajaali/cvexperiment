@@ -4,16 +4,15 @@
 
 	<head>
 		<title>HappyCV.Co</title>
+		<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
-		<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main-print.css" media="print">-->
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		
-		<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design-print.css" media="print">		-->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
   			api_key: vrhgoh8uur9f
 			scope: r_basicprofile,r_fullprofile,r_emailaddress,r_contactinfo
   			onLoad: onLinkedInLoad
-  			authorize: true
+  			<!--authorize: true-->
 		</script>
 		<script src="{{ STATIC_URL }}serious_design.js"></script>
 		<script src="{{ STATIC_URL }}main.js"></script>		
@@ -22,7 +21,7 @@
 	<body>
 		<div id="page">
 			<div id="menubar">
-				<p class="nav-title leckerli">Welcome to HappyCV.Co</p>
+				<p class="nav-title leckerli">Welcome to PixledCV.com</p>
 				<p class="nav-writing handlee">Refresh your CV with our great template.</p>
 				<p id="login-text" class="nav-writing-small handlee">Sign in with linkedin to fillout the template:</p>
 				<script type="in/Login"></script> 

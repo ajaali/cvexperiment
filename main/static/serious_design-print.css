@@ -1,19 +1,20 @@
-@import url(http://fonts.googleapis.com/css?family=Rambla:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Rambla:400,700);*/
 @import url(http://fonts.googleapis.com/css?family=Cantarell:400italic);
-
 
 .name-box {
     border-bottom-style: solid;
     border-width: thin;
     width: 100%;
-    height: 37px;
+    height: 46px;
 }
 
 .rambla { font-family: 'Rambla', sans-serif; }
-.cantarell { font-family: 'Cantarell', sans-serif;}
+/*.cantarell { font-family: 'Cantarell', sans-serif;}*/
+.cantarell {font-family: sans-serif;}
+
 
 #name {
-    font-size:14px;
+    font-size:18px;
     float:left;
     margin: 15px 0px 0px 15px;
     padding:0px;
@@ -21,11 +22,11 @@
 
 .contact-box {
     float:left;
-    width: 110px;
-    height: 653px;
+    width: 130px;
+    height: 853px;
     border-right-style:solid;
     border-width: thin;
-    padding-top:50px;
+    padding-top:65px;
 }
 
 
@@ -35,7 +36,7 @@
     margin: 10px 0px 2px 15px;
     text-transform:capitalize;
     display:block;
-    font-size:12px;
+    font-size:14px;
     font-weight:700;
 }
 
@@ -43,45 +44,44 @@
     float:left;
     margin: 0px 0px 2px 20px;
     display:block;
-    font-size:10px;
+    font-size:12px;
 }
 
 div.content-box{
     float:left;
-    width: 380px;
-    height: 680px;
-	padding-left:10px;
-	padding-right:20px;
+    width: 508px;
+    height: 870px;
+	padding: 10px 0px 0px 10px;
 }
 
 
 h2 {
 	display:inline-block;
 	border-bottom-style:solid;
-	font-size:14px;
+	font-size:18px;
 	border-width:thin;
 	padding:0px;
 	margin:10px 0px 5px 0px; 
 	font-weight:400;
 	position:relative;
-	line-height:19px; /*need this to get jquery height correct with custom fonts*/
+	line-height:23px; /*need this to get jquery height correct with custom fonts*/
 }
 
 h4 {
 	display:block;
-	font-size:12px;
+	font-size:16px;
 	padding:0px;
 	margin:0px; 
 	font-weight:400;
 	margin: 5px 0px	5px	5px;
-	line-height:16px;
+	line-height:20px;
 }
 
 .description {
-	font-size:10px;
+	font-size:12px;
 	font-style:italic;
 	margin:0px 0px 0px 5px;
-	line-height:15px;
+	line-height:17px;
 }
 
 .company-header {

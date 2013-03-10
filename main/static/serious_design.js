@@ -5,9 +5,9 @@ add_to_page = function (element) {
     
     // DEBUG CODE
     console.log(element);
-    console.log("space before " + space_remaining + 
-                " height " + element.outerHeight(true) +
-                " space after " + (space_remaining - element.outerHeight(true)) );
+    //console.log("space before " + space_remaining + 
+                //" height " + element.outerHeight(true) +
+                //" space after " + (space_remaining - element.outerHeight(true)) );
     if (element.hasClass("alignement-container") == true) {
         element.children().each(function (idx, chl) {
             console.log($(chl));
@@ -19,8 +19,12 @@ add_to_page = function (element) {
     if (space_remaining - element.outerHeight(true) < 0) {
         create_page(member);        
     }
-    space_remaining = space_remaining - element.outerHeight(true);
     element.appendTo(content_box);
+    console.log("space before " + space_remaining + 
+                " height " + element.outerHeight(true));
+    space_remaining = space_remaining - element.outerHeight(true);
+    console.log(" space after " + space_remaining  );
+    
 }
 
 next_button_click = function () {
@@ -171,7 +175,6 @@ create_education = function (member) {
             $("<h4>").addClass("rambla")
                      .html(edu.degree + ", " + edu.fieldOfStudy)
                      .appendTo(top_holder);
-            add_to_page(top_holder);
                         
             //Check if there is a notes param returned as part of the education
             if (edu.notes != undefined) {
@@ -303,5 +306,5 @@ create_page = function (member, hidden) {
     //Add Content Section
     content_box = $("<div>").addClass("content-box")
                             .appendTo(page);
-    space_remaining = content_box.height()
+    space_remaining = content_box.height() - 30;
 }
