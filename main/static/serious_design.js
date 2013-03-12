@@ -80,7 +80,7 @@ start_serious_design = function (member) {
 
 create_summary = function (member) {
     //Create the summary section
-    if (member.summary != "") {
+    if (member.summary != undefined && member.summary != "") {
         add_to_page($("<h2>").addClass("rambla")
                              .html("EXPERTISE & OBJECTIVES"));
         add_to_page($("<p>").addClass("description cantarell")
@@ -91,7 +91,8 @@ create_summary = function (member) {
 //Add Positions
 create_position = function (member) {
     // Check if the position parameter is returned in the member profile
-    if (member.positions.values != undefined) {
+    if (member.positions != undefined && 
+         member.positions.values != undefined) {
         // Create a title header for the position section
         var top_holder = $("<div>").addClass("alignement-container");    
         $("<h2>").addClass("rambla")
@@ -153,7 +154,8 @@ create_position = function (member) {
 //Add Educations
 create_education = function (member) {
     //if the ed section has values the continue
-    if (member.educations.values != undefined) {
+    if (member.educations != undefined && 
+         member.educations.values != undefined) {
         //Create the ed section header
         var top_holder = $("<div>").addClass("alignement-container");    
         $("<h2>").addClass("rambla")
@@ -203,7 +205,8 @@ create_education = function (member) {
 
 create_certification = function (member) {
     //Add Certifications
-    if (member.certifications.values != undefined) {
+    if (member.certifications != undefined && 
+         member.certifications.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
                               .html("CERTIFICATIONS"));
         $.each(member.certifications.values, function(index, cert) {
@@ -215,7 +218,8 @@ create_certification = function (member) {
 
 create_language = function (member) {
     //Add Languages
-    if (member.languages.values != undefined) {
+    if (member.languages != undefined && 
+         member.languages.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
                               .html("LANGUAGES"))
         $.each(member.languages.values, function(index, lang) {
@@ -227,7 +231,8 @@ create_language = function (member) {
 
 create_skills = function (member) {
     //Add Skills
-    if (member.skills.values != undefined) {
+    if (member.skills != undefined && 
+         member.skills.values != undefined) {
         add_to_page($("<h2>").addClass("rambla")
                               .html("Skills"));
         var skills_string = ""
