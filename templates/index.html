@@ -12,7 +12,7 @@
   			api_key: vrhgoh8uur9f
 			scope: r_basicprofile,r_fullprofile,r_emailaddress,r_contactinfo
   			onLoad: onLinkedInLoad
-  			<!--authorize: true-->
+  			authorize: true
 		</script>
 		<script src="{{ STATIC_URL }}serious_design.js"></script>
 		<script src="{{ STATIC_URL }}main.js"></script>
@@ -34,8 +34,14 @@
 		<div id="nav-bar">
 			<div class="center-page">
 				<label class="nav-title leckerli">PixeledCV</label>
-				<img id="linkedin-login" src="{{ STATIC_URL }}/linkedin.png"></img>
-				<label id="signin-text" class="right handlee">Login with Linkedin -></label>
+				<div id="login-section">
+					<label id="signin-text" class="handlee">Login with Linkedin</label>
+					<img id="linkedin-login" src="{{ STATIC_URL }}/linkedin.png"></img>
+				</div>
+				<div id="logout-section">
+					<label id="member-name" class="handlee"></label>
+					<label id="signout" class="handlee">Sign Out</label>
+				</div>
 			</div>
 		</div>
 		<div id="cv-container">

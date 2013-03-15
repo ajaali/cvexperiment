@@ -4,7 +4,7 @@ function onLinkedInLoad() {
 
 function onLinkedInAuth() {
   // Change the login div
-  $("#login-text").hide();
+  $("#login-section").hide();
   // Retrieve linkedin profile
   IN.API.Profile("me")
     .fields("firstName", 
@@ -29,8 +29,8 @@ function onLinkedInAuth() {
 }
 
 var logged_in_transforms = function (member) {
-  $("#logged-in-name").html("Hello " + member.firstName + ".");
-  $("#logged-in-text").show();
+  $("#member-name").html(member.firstName + " " + member.lastName);
+  $("#logout-section").show();
 }
 
 
@@ -42,9 +42,21 @@ function displayProfiles(profiles) {
 }
 
 
+var clear_cv = function () {
+  $("#cv").empty();
+  $("#prev-button").hide();
+  $("#next-button").hide();
+}
+
 $(document).ready( function () {
-  $("#linkedin-login").bind('click',function () {
+  $("#login-section").bind('click',function () {
     IN.User.authorize(); 
-    return false;
+    });
+  $("#signout").bind('click', function () {
+      IN.User.logout();
+      clear_cv();
+      $("#login-section").show();
+      $("#logout-section").hide();
+      
     });
 });
