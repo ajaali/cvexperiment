@@ -33,6 +33,13 @@ body {
 	margin:0px 0px 0px 0px;
 }
 
+.menu-item {
+	display:block;
+	color:#2A200E;
+	font-size: 20px;
+	margin:0px 0px 10px 0px;
+}
+
 #login-section {
 	float:right;
 }
@@ -66,11 +73,16 @@ body {
 #cv-container {
 	margin-left:auto;
 	margin-right:auto;
-	width:630px;
+	width:830px;
 }
 
 img.page-button {
 	display:none;
+}
+
+#buttons {
+	float:left;
+	margin: 20px 100px 0px 0px;
 }
 
 div.button-holder {
