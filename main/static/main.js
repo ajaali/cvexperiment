@@ -40,3 +40,11 @@ function displayProfiles(profiles) {
   logged_in_transforms(member);
   start_serious_design(member);
 }
+
+
+$(document).ready( function () {
+  $("#linkedin-login").bind('click',function () {
+    IN.User.authorize(); 
+    return false;
+    });
+});
