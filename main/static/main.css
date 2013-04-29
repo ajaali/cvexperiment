@@ -34,33 +34,34 @@ body {
 }
 
 .menu-item {
-	display:block;
+	display:inline;
 	color:#2A200E;
-	font-size: 20px;
-	margin:0px 0px 10px 0px;
+	font-size: 14px;
+	margin:0px 20px 0px 0px;
 }
 
 #login-section {
+	position:relative;
 	float:right;
+	top:7px;
 }
 
 #signin-text {
 	position:relative;
 	display:inline-box;
-	top:2px;
 	margin-right: 5px;
 }
 
 #linkedin-login {
 	position:relative;
 	display:inline-box;
-	top:8px;	
+	top:5px;
 }
 
 #logout-section {
 	position:relative;
 	float:right;
-	top:10px;
+	top:17px;
 	display:none;
 }
 
@@ -81,8 +82,8 @@ img.page-button {
 }
 
 #buttons {
-	float:left;
-	margin: 20px 100px 0px 0px;
+	display:inline;
+	margin-left:50px;
 }
 
 div.button-holder {
