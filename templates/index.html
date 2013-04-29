@@ -6,13 +6,13 @@
 		<title>Pixeled CV</title>
 		<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		
+		<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		-->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
   			api_key: vrhgoh8uur9f
 			scope: r_basicprofile,r_fullprofile,r_emailaddress,r_contactinfo
   			onLoad: onLinkedInLoad
-  			authorize: true
+  			<!--authorize: true-->
 		</script>
 		<script src="{{ STATIC_URL }}serious_design.js"></script>
 		<script src="{{ STATIC_URL }}main.js"></script>
@@ -31,32 +31,10 @@
 	</head>	
 	
 	<body>
-		<div id="nav-bar">
-			<div class="center-page">
-				<label class="nav-title leckerli">PixeledCV</label>
-				<div id="buttons">
-					<label class="menu-item handlee">Email</label>
-					<label class="menu-item handlee">Download</label>
-					<label class="menu-item handlee">Report Error</label>
-				</div>	
-				<div id="login-section">
-					<label id="signin-text" class="handlee">Login with Linkedin</label>
-					<img id="linkedin-login" src="{{ STATIC_URL }}/linkedin.png"></img>
-				</div>
-				<div id="logout-section">
-					<label id="member-name" class="handlee"></label>
-					<label id="signout" class="handlee">Sign Out</label>
-				</div>
-			</div>
-		</div>
-		<div id="cv-container">
-			<div class="button-holder">
-				<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
-			</div>
-			<div id="cv"></div>
-			<div class="button-holder">
-				<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
-			</div>
+		<div id="intro">
+			<label id="logo" class="leckerli">PixeledCV</label>	
+			<label id="description" class="titillium">Convert your linkedin profile into a CV.</label>
+			<a href=""><img id="linkedin-login" src="{{ STATIC_URL }}/linkedin-icon.png"></img></a>
 		</div>
 	</body>
 	

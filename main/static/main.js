@@ -49,7 +49,7 @@ var clear_cv = function () {
 }
 
 $(document).ready( function () {
-  $("#login-section").bind('click',function () {
+  $("#linkedin-login").bind('click',function () {
     IN.User.authorize(); 
     });
   $("#signout").bind('click', function () {

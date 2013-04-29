@@ -1,115 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Leckerli+One);
-@import url(http://fonts.googleapis.com/css?family=Handlee);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
 
 .leckerli { font-family: 'Leckerli One', cursive; }
-.handlee { font-family: 'Handlee', cursive; }
+.titillium { font-family: 'Titillium Web', sans-serif; }
 
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color:#ECDDC6;	
-}
-
-#nav-bar  {
-	position:relative;
-	top: 0px;
-	height: 40px;
-	width: 100%;
-	background-color:#E0C8A3;
-	marign: 0px;
-	padding: 0px;
-}
-
-.center-page {
-	width: 1024px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-.nav-title {
-	display:inline;
-	color:#2A200E;
-	font-size: 30px;
-	margin:0px 0px 0px 0px;
-}
-
-.menu-item {
-	display:inline;
-	color:#2A200E;
-	font-size: 14px;
-	margin:0px 20px 0px 0px;
-}
-
-#login-section {
-	position:relative;
-	float:right;
-	top:7px;
-}
-
-#signin-text {
-	position:relative;
-	display:inline-box;
-	margin-right: 5px;
+	background-color:#220B0C;	
 }
 
 #linkedin-login {
-	position:relative;
-	display:inline-box;
-	top:5px;
-}
-
-#logout-section {
-	position:relative;
-	float:right;
-	top:17px;
-	display:none;
-}
-
-#signout {
-	color:red;
-	margin-left:15px;
-	text-decoration:underline
-}
-
-#cv-container {
-	margin-left:auto;
-	margin-right:auto;
-	width:830px;
-}
-
-img.page-button {
-	display:none;
-}
-
-#buttons {
-	display:inline;
-	margin-left:50px;
-}
-
-div.button-holder {
-	float:left;
-	margin-top:346px;
 	width:48px;
 	height:48px;
+	margin-left:226px;
+	margin-top:40px;
 }
 
-#cv {
-	float:left;
-	width:523px;
-	height:740px;
-	border-style:solid;
-	border-width:thin;
-	background-color:white;
-	margin-top: 10px;
+#intro {
 	margin-left:auto;
 	margin-right:auto;
-}
-
-div.page {
-	float:left;
+	width:500px;
+	height:300px;
 	background-color:white;
-	margin:0px;
-	width:523px;
-	height:740px;
+	border-radius: 15px;
+	margin-top: 30px;
 }
 
+#logo {
+	display:block;
+	color:#732628;
+	font-size: 80px;
+	margin-left:69px;
+	padding-top:20px;
+}
+
+#description {
+	display:block;
+	margin-left:85px;
+	margin-top:15px;
+	font-size: 20px;	
+	color:#732628;
+}
