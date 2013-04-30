@@ -7,13 +7,13 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color:#220B0C;	
+	background-color:#160800;	
 }
 
 #linkedin-login {
-	width:48px;
+	width:127px;
 	height:48px;
-	margin-left:226px;
+	margin-left:186px;
 	margin-top:40px;
 }
 
@@ -22,14 +22,14 @@ body {
 	margin-right:auto;
 	width:500px;
 	height:300px;
-	background-color:white;
+	background-color:#160800;
 	border-radius: 15px;
 	margin-top: 30px;
 }
 
 #logo {
 	display:block;
-	color:#732628;
+	color:#F25F10;
 	font-size: 80px;
 	margin-left:69px;
 	padding-top:20px;
@@ -40,5 +40,5 @@ body {
 	margin-left:85px;
 	margin-top:15px;
 	font-size: 20px;	
-	color:#732628;
+	color:#F25F10;
 }

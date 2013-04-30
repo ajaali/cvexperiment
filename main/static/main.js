@@ -48,7 +48,14 @@ var clear_cv = function () {
   $("#next-button").hide();
 }
 
+var align_intro = function() {
+  var intro = $("#intro");
+  intro.css("margin-top", ($(window).height()-intro.height())/2);
+}
+
 $(document).ready( function () {
+  align_intro();
+
   $("#linkedin-login").bind('click',function () {
     IN.User.authorize(); 
     });
