@@ -42,3 +42,42 @@ body {
 	font-size: 20px;	
 	color:#F25F10;
 }
+
+
+#cv-container {
+	margin-top:30px;
+	margin-left:auto;
+	margin-right:auto;
+	width:701px;
+	display:none;
+}
+
+img.page-button {
+	display:none;
+}
+
+div.button-holder {
+	float:left;
+	margin:346px 20px 0px 20px;
+	width:48px;
+	height:48px;
+}
+
+#cv {
+	float:left;
+	width:523px;
+	height:740px;
+	border-style:solid;
+	border-width:thin;
+	background-color:white;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div.page {
+	float:left;
+	background-color:white;
+	margin:0px;
+	width:523px;
+	height:740px;
+}

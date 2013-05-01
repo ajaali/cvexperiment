@@ -29,6 +29,12 @@ function onLinkedInAuth() {
 }
 
 var logged_in_transforms = function (member) {
+  $("#description").hide();
+  $("#linkedin-login").hide();
+  $("#intro").css("height", $("#logo").css("height"));
+  $("#intro").animate({marginTop : "0px"},500);
+  
+  $("#cv-container").slideDown();
   $("#member-name").html(member.firstName + " " + member.lastName);
   $("#logout-section").show();
 }

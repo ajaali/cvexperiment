@@ -6,7 +6,7 @@
 		<title>Pixeled CV</title>
 		<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
-		<!--<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		-->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design.css">		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
   			api_key: vrhgoh8uur9f
@@ -36,6 +36,15 @@
 			<label id="description" class="titillium">Convert your linkedin profile into a CV.</label>
 			<img id="linkedin-login" src="{{ STATIC_URL }}/linkedin.png"></img>
 		</div>
+		<div id="cv-container">
+			<div class="button-holder">
+				<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
+			</div>
+			<div id="cv"></div>
+			<div class="button-holder">
+				<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
+			</div>
+		</div>		
 	</body>
 	
 	
