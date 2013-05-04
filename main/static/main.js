@@ -32,8 +32,11 @@ var logged_in_transforms = function (member) {
   $("#description").hide();
   $("#linkedin-login").hide();
   $("#intro").css("height", $("#logo").css("height"));
-  $("#intro").animate({marginTop : "0px"},500);
-  
+  $("#intro").animate({marginTop : "0px"},500, complete = function () { 
+       $("#logo").animate({marginLeft : "-2px"},500, complete = function () {
+            $("#controls").fadeIn();
+          });
+    });
   $("#cv-container").slideDown();
   $("#member-name").html(member.firstName + " " + member.lastName);
   $("#logout-section").show();

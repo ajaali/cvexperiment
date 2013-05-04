@@ -13,14 +13,14 @@ body {
 #linkedin-login {
 	width:127px;
 	height:48px;
-	margin-left:186px;
+	margin-left:198px;
 	margin-top:40px;
 }
 
 #intro {
 	margin-left:auto;
 	margin-right:auto;
-	width:500px;
+	width:523px;
 	height:300px;
 	background-color:#160800;
 	border-radius: 15px;
@@ -28,24 +28,36 @@ body {
 }
 
 #logo {
-	display:block;
+	position:relative;
+	display:inline-block;
 	color:#F25F10;
 	font-size: 80px;
-	margin-left:69px;
+	margin-left:81px;
 	padding-top:20px;
+}
+
+#controls {
+	display:none;
+	margin-top:80px;
+	float:right;
+	/*width:105px;*/
 }
 
 #description {
 	display:block;
-	margin-left:85px;
+	margin-left:97px;
 	margin-top:15px;
 	font-size: 20px;	
 	color:#F25F10;
 }
 
+img.control_buttons {
+	float:right;
+	margin-left:23px;
+}
 
 #cv-container {
-	margin-top:30px;
+	margin-top:15px;
 	margin-left:auto;
 	margin-right:auto;
 	width:701px;
