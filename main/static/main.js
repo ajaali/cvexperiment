@@ -51,10 +51,17 @@ function displayProfiles(profiles) {
 }
 
 
-var clear_cv = function () {
+var logout = function () {
+  $("#controls").hide();
+  $("#cv-container").hide();
   $("#cv").empty();
   $("#prev-button").hide();
   $("#next-button").hide();
+  $("#intro").css("height", "300px");
+  align_intro();
+  $("#logo").css("margin-left", "81px");
+  $("#description").show();
+  $("#linkedin-login").show();
 }
 
 var align_intro = function() {
@@ -68,11 +75,8 @@ $(document).ready( function () {
   $("#linkedin-login").bind('click',function () {
     IN.User.authorize(); 
     });
-  $("#signout").bind('click', function () {
+  $("#logout").bind('click', function () {
       IN.User.logout();
-      clear_cv();
-      $("#login-section").show();
-      $("#logout-section").hide();
-      
+      logout();
     });
 });
