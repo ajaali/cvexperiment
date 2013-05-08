@@ -27,7 +27,7 @@ def save_print(request):
 
 def save_error(request):
     """
-    Create a errpr report object in the database
+    Create a error report object in the database
     """
     if request.method == "POST":
         error_rep = ErrorReport(uuid = uuid.uuid1().hex)
