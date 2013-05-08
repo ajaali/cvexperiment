@@ -7,6 +7,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
     url(r'^$', 'main.views.main_page'),
+    url(r'^save_print/$', 'main.views.save_print'),
+    url(r'^save_error/$', 'main.views.save_error'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
