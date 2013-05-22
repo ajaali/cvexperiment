@@ -1,5 +1,28 @@
-/*@import url(http://fonts.googleapis.com/css?family=Rambla:400,700);*/
-@import url(http://fonts.googleapis.com/css?family=Cantarell:400italic);
+@font-face
+{
+  font-family: 'Cantarell';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/static/Cantarell-Oblique.ttf) format('truetype');
+}
+
+@font-face
+{
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/static/Rambla-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/static/Rambla-Bold.ttf) format('truetype');
+}
+
+.cantarell { font-family: 'Cantarell', sans-serif; }
+.rambla { font-family: 'Rambla', sans-serif; }
 
 .name-box {
     border-bottom-style: solid;
@@ -7,11 +30,6 @@
     width: 100%;
     height: 46px;
 }
-
-.rambla { font-family: 'Rambla', sans-serif; }
-/*.cantarell { font-family: 'Cantarell', sans-serif;}*/
-.cantarell {font-family: sans-serif;}
-
 
 #name {
     font-size:18px;
