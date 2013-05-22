@@ -37,3 +37,13 @@ def save_error(request):
         error_rep.save()
         return HttpResponse(simplejson.dumps({"status":"OK"}))
     return HttpResponse(simplejson.dumps({"status":"ERROR"}))
+
+def show_print(request, uuid):
+    """
+    Display the printable page
+    """
+    printable = Printable.objects.get(id=1)
+    return render_to_response("printable.html", 
+                              {'member': printable.profile_json }, 
+                              context_instance=RequestContext(request))
+    

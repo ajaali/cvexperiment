@@ -2,28 +2,6 @@ body {
 	background-color:white;
 }
 
-#page {
-	margin:0px;
-	width:auto;
-}
-
-#menubar {
-	display:none;
-}
-
-.IN-widget
-{
-	display:none;
-}
-
-img.page-button {
-	display:none;
-}
-
-div.button-holder {
-	display:none;
-}
-
 #cv {
 	float:left;
 	border-style:none;
