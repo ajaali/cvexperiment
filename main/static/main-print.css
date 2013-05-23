@@ -1,25 +1,23 @@
 body {
 	background-color:white;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 
 #cv {
-	float:left;
-	border-style:none;
 	width:650px;
-	height:972px;
+	height:965px;
 	margin:0px;
-	
+    /*height:100%; */
+    /*overflow: hidden;	*/
 }
 
 div.page {
 	display:block;
-	float:left;
 	background-color:white;
 	margin-bottom:8px;
 	width:650px;
-	height:972px;
-	/*height:970px;*/
-	/*border-style:solid;*/
-	/*border-width:thin;*/
+	height:940px;
+	page-break-after:always;
 }
 

@@ -41,7 +41,7 @@
 .contact-box {
     float:left;
     width: 130px;
-    height: 853px;
+    height: 835px;
     border-right-style:solid;
     border-width: thin;
     padding-top:65px;
@@ -51,7 +51,7 @@
 
 .contact-title {
     clear:both; 
-    margin: 10px 0px 2px 15px;
+    margin: 10px 0px 2px 0px;
     text-transform:capitalize;
     display:block;
     font-size:14px;
@@ -60,7 +60,7 @@
 
 .contact-value {
     float:left;
-    margin: 0px 0px 2px 20px;
+    margin: 0px 0px 2px 5px;
     display:block;
     font-size:12px;
 }
