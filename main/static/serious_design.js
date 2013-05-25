@@ -2,7 +2,6 @@
 // return a new page if needed
 add_to_page = function (element) {
     element.appendTo(content_box);
-    console.log(element);
     if (element.hasClass("alignement-container") == true) {
         element.children().each(function (idx, chl) {
         });
