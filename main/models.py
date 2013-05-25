@@ -12,3 +12,4 @@ class ErrorReport(models.Model):
     email_to = models.EmailField()
     profile_json = models.TextField()
     description = models.TextField()
+    user_system = models.TextField()

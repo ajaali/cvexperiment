@@ -29,11 +29,13 @@ def save_error(request):
     """
     Create a error report object in the database
     """
+    print request
     if request.method == "POST":
         error_rep = ErrorReport(uuid = uuid.uuid1().hex)
         error_rep.email_to = request.POST['email_to']
         error_rep.profile_json = request.POST['profile_json']
         error_rep.description = request.POST['description']
+        error_rep.user_system = request.META['HTTP_USER_AGENT']
         error_rep.save()
         return HttpResponse(simplejson.dumps({"status":"OK"}))
     return HttpResponse(simplejson.dumps({"status":"ERROR"}))
