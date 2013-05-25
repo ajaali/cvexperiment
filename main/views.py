@@ -44,7 +44,7 @@ def show_print(request, uuid):
     """
     Display the printable page
     """
-    printable = Printable.objects.get(id=1)
+    printable = Printable.objects.get(uuid=uuid)
     return render_to_response("printable.html", 
                               {'member': printable.profile_json }, 
                               context_instance=RequestContext(request))

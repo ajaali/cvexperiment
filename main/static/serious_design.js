@@ -276,7 +276,7 @@ create_page = function (member, hidden) {
                     .html("Address")
                     .appendTo(contact_box);
         var formatted_address = member.mainAddress.replace(/(\r\n|\n|\r)/gm,"<br\>")
-        $("<label>").addClass("contact-value rambla")
+        $("<p>").addClass("contact-value rambla")
                     .html(formatted_address )
                     .appendTo(contact_box);
     }
@@ -285,7 +285,7 @@ create_page = function (member, hidden) {
         $("<label>").addClass("contact-title rambla")
                     .html(phone.phoneType)
                     .appendTo(contact_box);
-        $("<label>").addClass("contact-value rambla")
+        $("<p>").addClass("contact-value rambla")
                     .html(phone.phoneNumber)
                     .appendTo(contact_box);
     });
@@ -294,7 +294,7 @@ create_page = function (member, hidden) {
         $("<label>").addClass("contact-title rambla")
                     .html("Email")
                     .appendTo(contact_box);
-        $("<label>").addClass("contact-value rambla")
+        $("<p>").addClass("contact-value rambla")
                     .html(member.emailAddress)
                     .appendTo(contact_box);
     }

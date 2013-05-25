@@ -34,7 +34,7 @@
 #name {
     font-size:18px;
     float:left;
-    margin: 15px 0px 0px 15px;
+    margin: 15px 0px 0px 0px;
     padding:0px;
 }
 
@@ -59,10 +59,9 @@
 }
 
 .contact-value {
-    float:left;
     margin: 0px 0px 2px 5px;
-    display:block;
-    font-size:12px;
+    font-size:10px;
+	word-wrap: break-word;
 }
 
 div.content-box{
