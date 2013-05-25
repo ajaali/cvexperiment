@@ -145,7 +145,6 @@ INSTALLED_APPS = (
     
     ## Applications
     "main",
-    "printable",
 )
 
 # A sample logging configuration. The only tangible logging
