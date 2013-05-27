@@ -3,9 +3,11 @@ import simplejson
 
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, RequestContext
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 from main.models import ErrorReport
 
+@ensure_csrf_cookie
 def main_page(request):
     """
     Render the main page
