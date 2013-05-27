@@ -270,7 +270,7 @@ create_page = function (member, hidden) {
     var contact_box = $("<div>").addClass("contact-box")
                                  .appendTo(page);
     // Add Address
-    if (member.mainAddress != '') {
+    if (member.mainAddress != undefined && member.mainAddress != '') {
         $("<label>").addClass("contact-title rambla")
                     .html("Address")
                     .appendTo(contact_box);
@@ -289,7 +289,7 @@ create_page = function (member, hidden) {
                     .appendTo(contact_box);
     });
     // Add Email Address
-    if (member.emailAddress != '') {
+    if (member.emailAddress != undefined && member.emailAddress != '') {
         $("<label>").addClass("contact-title rambla")
                     .html("Email")
                     .appendTo(contact_box);
