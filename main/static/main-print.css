@@ -1,17 +1,78 @@
+#linkedin-login {
+	display:none
+}
+
+#intro {
+	display:none
+}
+
+#logo {
+	display:none
+}
+
+#controls {
+	display:none
+}
+
+#description {
+	display:none
+}
+
+.steps {
+	display:none
+}
+
+#overlay {
+	display:none
+}
+
+#dialog {
+	display:none
+}
+
+#id_email {
+	display:none
+}
+
+#id_error_description {
+	display:none
+}
+
+.form_button {
+	display:none
+}
+
+img.control_buttons {
+	display:none
+}
+
+#cv-container {
+	margin:0px;
+}
+
+img.page-button {
+	display:none;
+}
+
+div.button-holder {
+	display:none
+}
+
 body {
 	background-color:white;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 #cv {
+	display:block;
 	width:650px;
 	height:965px;
 	margin:0px;
 }
 
 div.page {
-	display:block;
+	display:block !important;
 	background-color:white;
 	margin-bottom:8px;
 	width:650px;

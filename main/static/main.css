@@ -45,10 +45,18 @@ body {
 }
 
 #description {
-	display:inline-block;
+	display:block;
 	margin-left:208px;
 	margin-top:15px;
 	font-size: 20px;	
+	color:#F25F10;
+}
+
+.steps {
+	display:block;
+	margin-left:228px;
+	margin-top:15px;
+	font-size: 16px;	
 	color:#F25F10;
 }
 

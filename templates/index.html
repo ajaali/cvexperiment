@@ -5,7 +5,7 @@
 	<head>
 		<title>Pixeled CV</title>
 		<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design-print.css">		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="http://platform.linkedin.com/in.js">
@@ -27,6 +27,7 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		</script>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main-print.css" media="print">
 		
 	</head>	
 	
@@ -36,9 +37,11 @@
 			<div id="controls">
 				<img id="logout" class="control_buttons" src="{{ STATIC_URL }}/logout.png" alt="Logout" title="Logout"/>
 				<img id="report-error" class="control_buttons" src="{{ STATIC_URL }}/error.png" alt="Report Error" title="Report Error"/>
-				<img id="email" class="control_buttons" src="{{ STATIC_URL }}/email.png" alt="Email PDF" title="Email PDF"/>
 			</div>
 			<label id="description" class="titillium">Convert your linkedin profile into a CV.</label>
+			<label class="steps titillium">1. Login with Linkedin</label>
+			<label class="steps titillium">2. View your CV</label>
+			<label class="steps titillium">3. Print through your browser</label>
 			<img id="linkedin-login" src="{{ STATIC_URL }}/linkedin.png"></img>
 		</div>
 		<div id="overlay">

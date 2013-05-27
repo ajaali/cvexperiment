@@ -30,6 +30,7 @@ function onLinkedInAuth() {
 
 var logged_in_transforms = function (member) {
   $("#description").hide();
+  $(".steps").hide();
   $("#linkedin-login").hide();
   $("#intro").css("height", $("#logo").css("height"));
   $("#intro").animate({marginTop : "0px"},500, complete = function () { 
@@ -59,9 +60,11 @@ var logout = function () {
   $("#next-button").hide();
   $("#intro").css("height", "300px");
   align_intro();
-  $("#logo").css("margin-left", "81px");
+  $("#logo").css("margin-left", "192px");
   $("#description").show();
+  $(".steps").show();
   $("#linkedin-login").show();
+
 }
 
 var align_intro = function() {
@@ -211,8 +214,5 @@ $(document).ready( function () {
     });
   $("#report-error").bind('click', function () {
       show_error_dialog();
-  });
-  $("#email").bind('click', function () {
-      show_email_dialog();
   });
 });
