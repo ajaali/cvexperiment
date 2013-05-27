@@ -3,7 +3,7 @@
   font-family: 'Cantarell';
   font-style: italic;
   font-weight: 400;
-  src: url(/static/Cantarell-Oblique.ttf) format('truetype');
+  src: url("http://s3-eu-west-1.amazonaws.com/cvexperiment/Cantarell-Oblique.ttf") format('truetype');
 }
 
 @font-face
@@ -11,14 +11,14 @@
   font-family: 'Rambla';
   font-style: normal;
   font-weight: 400;
-  src: url(/static/Rambla-Regular.ttf) format('truetype');
+  src: url("http://s3-eu-west-1.amazonaws.com/cvexperiment/Rambla-Regular.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Rambla';
   font-style: normal;
   font-weight: 700;
-  src: url(/static/Rambla-Bold.ttf) format('truetype');
+  src: url("http://s3-eu-west-1.amazonaws.com/cvexperiment/Rambla-Bold.ttf") format('truetype');
 }
 
 .cantarell { font-family: 'Cantarell', sans-serif; }

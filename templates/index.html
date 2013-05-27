@@ -4,7 +4,6 @@
 
 	<head>
 		<title>Pixeled CV</title>
-		<link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}serious_design-print.css">		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -35,14 +34,14 @@
 		<div id="intro">
 			<label id="logo" class="leckerli">PixeledCV</label>	
 			<div id="controls">
-				<img id="logout" class="control_buttons" src="{{ STATIC_URL }}/logout.png" alt="Logout" title="Logout"/>
-				<img id="report-error" class="control_buttons" src="{{ STATIC_URL }}/error.png" alt="Report Error" title="Report Error"/>
+				<img id="logout" class="control_buttons" src="{{ STATIC_URL }}logout.png" alt="Logout" title="Logout"/>
+				<img id="report-error" class="control_buttons" src="{{ STATIC_URL }}error.png" alt="Report Error" title="Report Error"/>
 			</div>
 			<label id="description" class="titillium">Convert your linkedin profile into a CV.</label>
 			<label class="steps titillium">1. Login with Linkedin</label>
 			<label class="steps titillium">2. View your CV</label>
 			<label class="steps titillium">3. Print through your browser</label>
-			<img id="linkedin-login" src="{{ STATIC_URL }}/linkedin.png"></img>
+			<img id="linkedin-login" src="{{ STATIC_URL }}linkedin.png"></img>
 		</div>
 		<div id="overlay">
 			<div id="dialog">
@@ -50,11 +49,11 @@
 		</div>
 		<div id="cv-container">
 			<div class="button-holder">
-				<img id="prev-button" class="page-button" src="{{ STATIC_URL }}/prev.png"/>
+				<img id="prev-button" class="page-button" src="{{ STATIC_URL }}prev.png"/>
 			</div>
 			<div id="cv"></div>
 			<div class="button-holder">
-				<img id="next-button" class="page-button" src="{{ STATIC_URL }}/next.png"/>
+				<img id="next-button" class="page-button" src="{{ STATIC_URL }}next.png"/>
 			</div>
 		</div>		
 	</body>

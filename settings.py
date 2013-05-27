@@ -1,7 +1,7 @@
 # Django settings for a generic project.
 import os
 
-DEBUG = True
+DEBUG = False 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -83,8 +83,11 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
-
+if DEBUG:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = 'http://s3-eu-west-1.amazonaws.com/cvexperiment/'
+    
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
