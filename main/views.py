@@ -4,7 +4,7 @@ import simplejson
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, RequestContext
 
-from main.models import Printable, ErrorReport
+from main.models import ErrorReport
 
 def main_page(request):
     """
@@ -17,7 +17,6 @@ def save_error(request):
     """
     Create a error report object in the database
     """
-    print request
     if request.method == "POST":
         error_rep = ErrorReport(uuid = uuid.uuid1().hex)
         error_rep.email_to = request.POST['email_to']
@@ -32,7 +31,7 @@ def show_print(request, uuid):
     """
     Display the printable page
     """
-    printable = Printable.objects.get(uuid=uuid)
+    printable = ErrorReport.objects.get(uuid=uuid)
     return render_to_response("printable.html", 
                               {'member': printable.profile_json }, 
                               context_instance=RequestContext(request))

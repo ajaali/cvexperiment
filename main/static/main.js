@@ -46,7 +46,6 @@ var logged_in_transforms = function (member) {
 
 function displayProfiles(profiles) {
   member = profiles.values[0];
-  //console.log(member);
   logged_in_transforms(member);
   start_serious_design(member);
 }
@@ -137,40 +136,6 @@ var report_error = function () {
 			profile_json: JSON.stringify(member)}
   });  
   close_dialog();
-}
-
-var show_email_dialog = function() {
-  var dialog = $("#dialog");
-  dialog.css("height", "120px");
-  init_dialog();
-  var email_input = $("<input>").attr("id", "id_email")
-				 				.attr("type", "email")
-								.addClass("titillium")
-								.appendTo(dialog);
-								
-  if (member.emailAddress != '') {
-	email_input.attr("value", member.emailAddress)
-  }
-  else {
-	email_input.attr("placeholder", "email address")
-  }
-			  
-  $("<button>").attr("id", "id_submit")
-                .attr("type", "button")
-				.html("Send")
-			    .addClass("titillium")
-  			    .addClass("form_button")
-			    .appendTo(dialog)
-				.click(save_print);
-				
-  $("<button>").attr("id", "id_cancel")
-			  .attr("type", "button")
-   		      .addClass("titillium")
-			  .addClass("form_button")
-			  .html("Cancel")
-			  .appendTo(dialog)
-			  .click(close_dialog);
-
 }
 
 var save_print = function () {
